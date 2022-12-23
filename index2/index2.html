@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RUSSIAN_TRAINS</title>
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.bundle.min.js"></script>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css'>
+    <link rel="stylesheet" href="./index2.css">
+</head>
+
+<body>
+    <div class="box">
+        <!-- 头部布局 -->
+        <div class="header">
+            <center>
+                <div class="row">
+                    <div class="side_logo">
+                        <div class="logo_div">
+                            <a onclick="c()" href="../index1/index.html">
+                                <img src="./img/logo.png" class="logo">
+                                <h3 class="logo_size_a">
+                                    RUSSIAN
+                                </h3>
+                                <h3 class="logo_size_b">
+                                    TRAINS
+                                </h3>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="main_logo">
+                        <div class="menu">
+                            <ul>
+                                <li><a onclick="a()" id="a">Групповые поездки</a></li>
+                                <li><a onclick="a()" id="a">Членский центр</a></li>
+                                <li><a onclick="a()" id="a">Поддержка</a></li>
+                                <li><a class="active" id="login_button" onclick="login_button()">
+                                        <h6 id="login_h6">логин</h6>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+            </center>
+        </div>
+        <!-- 主体布局 -->
+        <div class="box_kong"></div>
+        <center>
+            <div class="A_box">
+                <div class="row_box">
+                    <div class="side_box">
+                        <h6 class="box_a">Выберите поезд</h6>
+                    </div>
+                    <div class="side_boxa">
+                        <h6 class="box_a">➞</h6>
+                    </div>
+                    <div class="side_box">
+                        <h6 class="box_a">Выберите места</h6>
+                    </div>
+                    <div class="side_boxa">
+                        <h6 class="box_a">➞</h6>
+                    </div>
+                    <div class="side_box">
+                        <h6 class="box_a">Выберите места</h6>
+                    </div>
+                    <div class="side_boxa">
+                        <h6 class="box_a">➞</h6>
+                    </div>
+                    <div class="side_box">
+                        <h6 class="box_a">Резервирование</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="shaixuan_box">
+                <div class="row_shaixuan">
+                    <div class="side_shaixuan">
+                        <div class="lie_box">
+                            <h6 class="box_a">Тип автомобиля</h6>
+                            <div class="check">
+                                <input type="checkbox" id="checkbox01" name="checkbox">
+                                <label for="checkbox01" class="check_input">1-кл. Спальный Комп.</label>
+                            </div>
+                            <div class="check">
+                                <input type="checkbox" id="checkbox02" name="checkbox">
+                                <label for="checkbox02" class="check_input">2-кл. Спальный Комп.</label>
+                            </div>
+                            <div class="check">
+                                <input type="checkbox" id="checkbox03" name="checkbox">
+                                <label for="checkbox03" class="check_input">3-cl. Открытый сон</label>
+                            </div>
+                            <div class="check">
+                                <input type="checkbox" id="checkbox04" name="checkbox">
+                                <label for="checkbox04" class="check_input">Сеанс</label>
+                            </div>
+                            <div class="check">
+                                <input type="checkbox" id="checkbox05" name="checkbox">
+                                <label for="checkbox05" class="check_input">Роскошь</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="side_shaixuan">
+                        <div class="lie_box">
+                            <h6 class="box_a">Время вылета</h6>
+                            <div class="check">
+                                <input type="checkbox" id="checkbox11" name="checkbox">
+                                <label for="checkbox11" class="check_input">Ночь 00:00 - 06:00</label>
+                            </div>
+                            <div class="check">
+                                <input type="checkbox" id="checkbox12" name="checkbox">
+                                <label for="checkbox12" class="check_input">Утро 06:00 - 12:00</label>
+                            </div>
+                            <div class="check">
+                                <input type="checkbox" id="checkbox13" name="checkbox">
+                                <label for="checkbox13" class="check_input">День 12:00 - 18:00</label>
+                            </div>
+                            <div class="check">
+                                <input type="checkbox" id="checkbox14" name="checkbox">
+                                <label for="checkbox14" class="check_input">Вечер 18:00 - 00:00</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="side_shaixuan">
+                        <div class="lie_box">
+                            <h6 class="box_a">Время прибытия</h6>
+                            <div class="check">
+                                <input type="checkbox" id="checkbox21" name="checkbox">
+                                <label for="checkbox21" class="check_input">Ночь 00:00 - 06:00</label>
+                            </div>
+                            <div class="check">
+                                <input type="checkbox" id="checkbox22" name="checkbox">
+                                <label for="checkbox22" class="check_input">Утро 06:00 - 12:00</label>
+                            </div>
+                            <div class="check">
+                                <input type="checkbox" id="checkbox23" name="checkbox">
+                                <label for="checkbox23" class="check_input">День 12:00 - 18:00</label>
+                            </div>
+                            <div class="check">
+                                <input type="checkbox" id="checkbox24" name="checkbox">
+                                <label for="checkbox24" class="check_input">Вечер 18:00 - 00:00</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="piao_box">
+                <div class="cp_box">
+                    <div class="cp_box_day">
+                        <h3 class="cp_box_a">
+                            Москва
+                        </h3>
+                        <h3 class="cp_box_a">
+                            ➞
+                        </h3>
+                        <h3 class="cp_box_a">
+                            Владимир
+                        </h3>
+                        <div>
+                            <h3 id="demo" class="text_time"></h3>
+                            <h3 class="text_time">月</h3>
+                            <h3 id="year" class="text_time"></h3>
+                            <h3 class="text_time">日</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="piao">
+                    <!-- 第一张票 -->
+                    <div class="piao_name">
+                        <img src="./img/th.jpg" class="piao_img">
+                        <p class="piao_mz"> 718Я (Ласточка)</p>
+                    </div>
+                    <div style="width: 100%;">
+                        <div class="row_piao">
+                            <div class="side_cpa">
+                                <div class="c">
+                                    <p class="piao_timec">
+                                        1:56
+                                    </p>
+                                    <p class="piao_sizec">Станция Курская</p>
+                                    <p class="piao_sizec">Место отправления</p>
+                                </div>
+                            </div>
+                            <div class="side_cpb">
+                                <p class="time_t">1ч. 41мин.</p>
+                                <p class="time_j">➞</p>
+                            </div>
+                            <div class="side_cpb">
+                                <div class="d">
+                                    <p class="piao_timed">
+                                        03:37
+                                    </p>
+                                    <p class="piao_sized">Владимир</p>
+                                    <p class="piao_sized">Место прибытия</p>
+                                </div>
+                            </div>
+                            <div class="side_cpc">
+                                <p class="piao_lubu">1 488 P</p>
+                            </div>
+                            <div class="side_cpb">
+                                <button class="button button1">покупать</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 第二张票 -->
+                <div class="piao_name">
+                    <img src="./img/th.jpg" class="piao_img">
+                    <p class="piao_mz">059А (Волга)</p>
+                </div>
+                <div style="width: 100%;">
+                    <div class="row_piao">
+                        <div class="side_cpa">
+                            <div class="c">
+                                <p class="piao_timec">02:48</p>
+                                <p class="piao_sizec">Станция Черкизово</p>
+                                <p class="piao_sizec">Место отправления</p>
+                            </div>
+                        </div>
+                        <div class="side_cpb">
+                            <p class="time_t">2ч. 6мин.</p>
+                            <p class="time_j">➞</p>
+                        </div>
+                        <div class="side_cpb">
+                            <div class="d">
+                                <p class="piao_timed">
+                                    04:54</p>
+                                <p class="piao_sized">Владимир</p>
+                                <p class="piao_sized">Место прибытия</p>
+                            </div>
+                        </div>
+                        <div class="side_cpc">
+                            <p class="piao_lubu">3 981 P</p>
+                        </div>
+                        <div class="side_cpb">
+                            <button class="button button1">покупать</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- 第三张票 -->
+                <div class="piao_name">
+                    <img src="./img/th.jpg" class="piao_img">
+                    <p class="piao_mz">
+                        729М (Ласточка)
+                    </p>
+                </div>
+                <div style="width: 100%;">
+                    <div class="row_piao">
+                        <div class="side_cpa">
+                            <div class="c">
+                                <p class="piao_timec">09:25</p>
+                                <p class="piao_sizec">Станция Черкизово</p>
+                                <p class="piao_sizec">Место отправления</p>
+                            </div>
+                        </div>
+                        <div class="side_cpb">
+                            <p class="time_t">1ч. 50мин.</p>
+                            <p class="time_j">➞</p>
+                        </div>
+                        <div class="side_cpb">
+                            <div class="d">
+                                <p class="piao_timed">
+                                    11:15</p>
+                                <p class="piao_sized">Владимир</p>
+                                <p class="piao_sized">Место прибытия</p>
+                            </div>
+                        </div>
+                        <div class="side_cpc">
+                            <p class="piao_lubu">2 999 P</p>
+                        </div>
+                        <div class="side_cpb">
+                            <button class="button button1">покупать</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- 第四张票 -->
+                <div class="piao_name">
+                    <img src="./img/th.jpg" class="piao_img">
+                    <p class="piao_mz">
+                        703Ч (Ласточка)</p>
+                </div>
+                <div style="width: 100%;">
+                    <div class="row_piao">
+                        <div class="side_cpa">
+                            <div class="c">
+                                <p class="piao_timec">10:35</p>
+                                <p class="piao_sizec">Станция Черкизово</p>
+                                <p class="piao_sizec">Место отправления</p>
+                            </div>
+                        </div>
+                        <div class="side_cpb">
+                            <p class="time_t">1ч. 48мин.</p>
+                            <p class="time_j">➞</p>
+                        </div>
+                        <div class="side_cpb">
+                            <div class="d">
+                                <p class="piao_timed">
+                                    12:23</p>
+                                <p class="piao_sized">Владимир</p>
+                                <p class="piao_sized">Место прибытия</p>
+                            </div>
+                        </div>
+                        <div class="side_cpc">
+                            <p class="piao_lubu">3 094 P</p>
+                        </div>
+                        <div class="side_cpb">
+                            <button class="button button1">покупать</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- 第五张票 -->
+                <div class="piao_name">
+                    <img src="./img/th.jpg" class="piao_img">
+                    <p class="piao_mz">705Ч (Ласточка)</p>
+                </div>
+                <div style="width: 100%;">
+                    <div class="row_piao">
+                        <div class="side_cpa">
+                            <div class="c">
+                                <p class="piao_timec">15:40</p>
+                                <p class="piao_sizec">Станция Черкизово</p>
+                                <p class="piao_sizec">Место отправления</p>
+                            </div>
+                        </div>
+                        <div class="side_cpb">
+                            <p class="time_t">1ч. 43мин.</p>
+                            <p class="time_j">➞</p>
+                        </div>
+                        <div class="side_cpb">
+                            <div class="d">
+                                <p class="piao_timed">
+                                    17:23
+                                </p>
+                                <p class="piao_sized">Владимир</p>
+                                <p class="piao_sized">Место прибытия</p>
+                            </div>
+                        </div>
+                        <div class="side_cpc">
+                            <p class="piao_lubu">4 618 P</p>
+                        </div>
+                        <div class="side_cpb">
+                            <button class="button button1">покупать</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- 第六张票 -->
+                <div class="piao_name">
+                    <img src="./img/th.jpg" class="piao_img">
+                    <p class="piao_mz">7086</p>
+                </div>
+                <div style="width: 100%;">
+                    <div class="row_piao">
+                        <div class="side_cpa">
+                            <div class="c">
+                                <p class="piao_timec">7086</p>
+                                <p class="piao_sizec">Станция Курская</p>
+                                <p class="piao_sizec">Место отправления</p>
+                            </div>
+                        </div>
+                        <div class="side_cpb">
+                            <p class="time_t">2ч. 21мин.</p>
+                            <p class="time_j">➞</p>
+                        </div>
+                        <div class="side_cpb">
+                            <div class="d">
+                                <p class="piao_timed">
+                                    18:06</p>
+                                <p class="piao_sized">Владимир</p>
+                                <p class="piao_sized">Место прибытия</p>
+                            </div>
+                        </div>
+                        <div class="side_cpc">
+                            <p class="piao_lubu">1 541 P</p>
+                        </div>
+                        <div class="side_cpb">
+                            <button class="button button1">покупать</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- 第七张票 -->
+                <div class="piao_name">
+                    <img src="./img/th.jpg" class="piao_img">
+                    <p class="piao_mz">732Г (Ласточка)</p>
+                </div>
+                <div style="width: 100%;">
+                    <div class="row_piao">
+                        <div class="side_cpa">
+                            <div class="c">
+                                <p class="piao_timec">16:15</p>
+                                <p class="piao_sizec">Станция Курская</p>
+                                <p class="piao_sizec">Место отправления</p>
+                            </div>
+                        </div>
+                        <div class="side_cpb">
+                            <p class="time_t">2ч. 12мин.</p>
+                            <p class="time_j">➞</p>
+                        </div>
+                        <div class="side_cpb">
+                            <div class="d">
+                                <p class="piao_timed">
+                                    18:27</p>
+                                <p class="piao_sized">Владимир</p>
+                                <p class="piao_sized">Место прибытия</p>
+                            </div>
+                        </div>
+                        <div class="side_cpc">
+                            <p class="piao_lubu">3 834 P</p>
+                        </div>
+                        <div class="side_cpb">
+                            <button class="button button1">покупать</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- 第八张票 -->
+                <div class="piao_name">
+                    <img src="./img/th.jpg" class="piao_img">
+                    <p class="piao_mz">733М (Ласточка)</p>
+                </div>
+                <div style="width: 100%;">
+                    <div class="row_piao">
+                        <div class="side_cpa">
+                            <div class="c">
+                                <p class="piao_timec">18:30</p>
+                                <p class="piao_sizec">Станция Черкизово</p>
+                                <p class="piao_sizec">Место отправления</p>
+                            </div>
+                        </div>
+                        <div class="side_cpb">
+                            <p class="time_t">1ч. 46мин.</p>
+                            <p class="time_j">➞</p>
+                        </div>
+                        <div class="side_cpb">
+                            <div class="d">
+                                <p class="piao_timed">
+                                    20:16
+                                </p>
+                                <p class="piao_sized">Владимир</p>
+                                <p class="piao_sized">Место прибытия</p>
+                            </div>
+                        </div>
+                        <div class="side_cpc">
+                            <p class="piao_lubu">4 462 P</p>
+                        </div>
+                        <div class="side_cpb">
+                            <button class="button button1">покупать</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- 第九张票 -->
+                <div class="piao_name">
+                    <img src="./img/th.jpg" class="piao_img">
+                    <p class="piao_mz">
+                        7090</p>
+                </div>
+                <div style="width: 100%;">
+                    <div class="row_piao">
+                        <div class="side_cpa">
+                            <div class="c">
+                                <p class="piao_timec">19:03</p>
+                                <p class="piao_sizec">Станция Черкизово</p>
+                                <p class="piao_sizec">Место отправления</p>
+                            </div>
+                        </div>
+                        <div class="side_cpb">
+                            <p class="time_t">2ч. 35мин.</p>
+                            <p class="time_j">➞</p>
+                        </div>
+                        <div class="side_cpb">
+                            <div class="d">
+                                <p class="piao_timed">
+                                    21:38</p>
+                                <p class="piao_sized">Владимир</p>
+                                <p class="piao_sized">Место прибытия</p>
+                            </div>
+                        </div>
+                        <div class="side_cpc">
+                            <p class="piao_lubu">1 541 P</p>
+                        </div>
+                        <div class="side_cpb">
+                            <button class="button button1">покупать</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- 第十张票 -->
+                <div class="piao_name">
+                    <img src="./img/th.jpg" class="piao_img">
+                    <p class="piao_mz">737Я (Ласточка)</p>
+                </div>
+                <div style="width: 100%;">
+                    <div class="row_piao">
+                        <div class="side_cpa">
+                            <div class="c">
+                                <p class="piao_timec">20:08</p>
+                                <p class="piao_sizec">Станция Черкизово</p>
+                                <p class="piao_sizec">Место отправления</p>
+                            </div>
+                        </div>
+                        <div class="side_cpb">
+                            <p class="time_t">1ч. 42мин.</p>
+                            <p class="time_j">➞</p>
+                        </div>
+                        <div class="side_cpb">
+                            <div class="d">
+                                <p class="piao_timed">
+                                    21:50</p>
+                                <p class="piao_sized">Владимир</p>
+                                <p class="piao_sized">Место прибытия</p>
+                            </div>
+                        </div>
+                        <div class="side_cpc">
+                            <p class="piao_lubu">1 928 P</p>
+                        </div>
+                        <div class="side_cpb">
+                            <button class="button button1">покупать</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- 第十一张票 -->
+                <div class="piao_name">
+                    <img src="./img/th.jpg" class="piao_img">
+                    <p class="piao_mz">232Я</p>
+                </div>
+                <div style="width: 100%;">
+                    <div class="row_piao">
+                        <div class="side_cpa">
+                            <div class="c">
+                                <p class="piao_timec">22:25</p>
+                                <p class="piao_sizec">Ярославский вокзал</p>
+                                <p class="piao_sizec">Место отправления</p>
+                            </div>
+                        </div>
+                        <div class="side_cpb">
+                            <p class="time_t">2ч. 58мин.</p>
+                            <p class="time_j">➞</p>
+                        </div>
+                        <div class="side_cpb">
+                            <div class="d">
+                                <p class="piao_timed">
+                                    01:23</p>
+                                <p class="piao_sized">Владимир</p>
+                                <p class="piao_sized">Место прибытия</p>
+                            </div>
+                        </div>
+                        <div class="side_cpc">
+                            <p class="piao_lubu">1 796 P</p>
+                        </div>
+                        <div class="side_cpb">
+                            <button class="button button1">покупать</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- 第十二张票 -->
+                <div class="piao_name">
+                    <img src="./img/th.jpg" class="piao_img">
+                    <p class="piao_mz">036Щ</p>
+                </div>
+                <div style="width: 100%;">
+                    <div class="row_piao">
+                        <div class="side_cpa">
+                            <div class="c">
+                                <p class="piao_timec">23:55</p>
+                                <p class="piao_sizec">Ярославский вокзал</p>
+                                <p class="piao_sizec">Место отправления</p>
+                            </div>
+                        </div>
+                        <div class="side_cpb">
+                            <p class="time_t">3ч. 6мин.</p>
+                            <p class="time_j">➞</p>
+                        </div>
+                        <div class="side_cpb">
+                            <div class="d">
+                                <p class="piao_timed">
+                                    03:01</p>
+                                <p class="piao_sized">Владимир</p>
+                                <p class="piao_sized">Место прибытия</p>
+                            </div>
+                        </div>
+                        <div class="side_cpc">
+                            <p class="piao_lubu">2 804 P</p>
+                        </div>
+                        <div class="side_cpb">
+                            <button class="button button1">покупать</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </center>
+    </div>
+    <center>
+        <div class="Tail">
+            <div class="row_3">
+                <div class="side_3">
+                    <h5 class="side_size_a">RUSSIAN</h5>
+                    <h5 class="side_size_b">TRAINS</h5>
+                    <p class="side_size_p">Tickets are provided by partners, including IM LLC. Ticket prices are
+                        inclusive of service
+                        charge. © RussianRailways.com, 2022</p>
+                </div>
+                <div class="side_3">
+                    <h5 class="side_size_h5">PAYMENT OPTIONS</h5>
+                    <div class="side_3_box">
+                        <div class="row">
+                            <div class="side_4"><img src="./img/mastercard.png" class="dide_4_img"></div>
+                            <div class="side_4"><img src="./img/visa.png" class="dide_4_img"></div>
+                            <div class="side_4"><img src="./img/mir copy.png" class="dide_4_img"></div>
+                            <div class="side_4"><img src="./img/paypal.png" class="dide_4_img"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </center>
+    <div class="tail_a"></div>
+    <div class="tail_b"></div>
+    <script src="./index2.js"></script>
+</body>
+
+</html>
